@@ -14,7 +14,7 @@ export default function Index() {
       
       <p className="text-gray-600 mb-8">
         Deep learning fanatic by day, open-source tinkerer by night 🦇
-        Navigating the startup rollercoaster in Paris & SF, after creating <a href="https://pyronear.org">Pyronear</a>, an early wildfire detection NGO.
+        Navigating the startup rollercoaster in Paris & SF, after creating <a href="https://pyronear.org" className="text-green-600 hover:text-green-800 underline">Pyronear</a>, an early wildfire detection NGO.
         Passions (also recurring year resolutions) include photography, surfing, and playing music.
       </p>
 
