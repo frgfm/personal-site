@@ -10,7 +10,14 @@ export function meta({}: Route.MetaArgs) {
 export default function Index() {
   return (
     <main className="min-h-screen p-8 max-w-2xl mx-auto flex flex-col justify-center">
-      <h1 className="text-3xl font-semibold mb-4">Hey, I'm F-G 👋</h1>
+      <div className="flex flex-col items-center mb-8">
+        <img
+          src="/images/profile.jpg"
+          alt="Profile picture"
+          className="w-48 h-48 rounded-full object-cover mb-8 border-4 border-gray-200"
+        />
+        <h1 className="text-3xl font-semibold">Hey, I'm F-G 👋</h1>
+      </div>
       
       <p className="text-gray-600 mb-8">
         Deep learning fanatic by day, open-source tinkerer by night 🦇
