@@ -1,6 +1,6 @@
 import type { Route } from './+types/index';
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_args: Route.MetaArgs) {
   return [
     { title: 'Tech brewing' },
     { name: 'description', content: 'Personal website of F-G' },
@@ -13,15 +13,15 @@ export default function Index() {
       <div className='flex flex-col items-center mb-8'>
         <img
           src='/images/profile.jpg'
-          alt='Profile picture'
+          alt='F-G'
           className='w-48 h-48 rounded-full object-cover mb-8 border-4 border-gray-200'
         />
-        <h1 className='text-3xl font-semibold'>Hey, I'm F-G 👋</h1>
+        <h1 className='text-3xl font-semibold'>Hey, I&apos;m F-G 👋</h1>
       </div>
 
       <p className='text-gray-600 mb-8'>
         Deep learning fanatic by day, open-source tinkerer by night 🦇
-        Navigating the startup rollercoaster in Paris & SF, after creating{' '}
+        Navigating the startup rollercoaster in Paris &amp; SF, after creating{' '}
         <a
           href='https://pyronear.org'
           className='text-green-600 hover:text-green-800 underline'
