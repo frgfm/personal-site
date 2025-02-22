@@ -22,8 +22,6 @@
   },
   "devDependencies": {
     "@react-router/dev": "^7.1.5",
-    "@tailwindcss/postcss": "^4.0.0",
-    "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^20",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
@@ -47,8 +45,8 @@
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.9.5",
     "@esbuild/linux-x64": "^0.24.0",
-    "@tailwindcss/linux-x64-gnu": "^4.0.6",
-    "@tailwindcss/linux-x64-musl": "^4.0.6",
+    "@tailwindcss/linux-x64-gnu": "^4.0.8",
+    "@tailwindcss/linux-x64-musl": "^4.0.8",
     "@swc/core-linux-x64-gnu": "^1.4.0",
     "@swc/core-linux-x64-musl": "^1.4.0",
     "@rollup/rollup-linux-x64-musl": "^4.9.5",
