@@ -1,0 +1,45 @@
+name: style
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+
+env:
+  NODE_VERSION: "22.10"
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Run check
+        run: |
+          npm install --dev --exact --frozen-lockfile
+          npm run typecheck
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Run prettier
+        run: |
+          npm install --dev --exact --frozen-lockfile
+          npm run format-check
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Run eslint
+        run: |
+          npm install --dev --exact --frozen-lockfile
+          npm run lint

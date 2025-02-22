@@ -6,7 +6,11 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,md,json}\"",
+    "format-check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,md,json}\"",
+    "check": "npm run typecheck && npm run lint && npm run format-check"
   },
   "dependencies": {
     "@react-router/node": "^7.1.5",
@@ -23,12 +27,34 @@
     "@types/node": "^20",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.24.1",
+    "@typescript-eslint/parser": "^8.24.1",
     "autoprefixer": "^10.4.20",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
     "postcss": "^8.5.2",
+    "prettier": "^3.5.2",
     "react-router-devtools": "^1.1.0",
     "tailwindcss": "^4.0.6",
-    "typescript": "^5.7.2",
+    "typescript": "^5.7.3",
     "vite": "^5.4.11",
     "vite-tsconfig-paths": "^5.1.4"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.9.5",
+    "@esbuild/linux-x64": "^0.24.0",
+    "@tailwindcss/linux-x64-gnu": "^4.0.6",
+    "@tailwindcss/linux-x64-musl": "^4.0.6",
+    "@swc/core-linux-x64-gnu": "^1.4.0",
+    "@swc/core-linux-x64-musl": "^1.4.0",
+    "@rollup/rollup-linux-x64-musl": "^4.9.5",
+    "@tailwindcss/oxide-linux-arm64-gnu": "^4.0.1",
+    "@tailwindcss/oxide-linux-arm64-musl": "^4.0.1",
+    "lightningcss-linux-x64-gnu": "^1.29.1",
+    "lightningcss-linux-x64-musl": "^1.29.1"
   }
 }
