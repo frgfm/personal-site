@@ -52,8 +52,8 @@
     "@swc/core-linux-x64-gnu": "^1.4.0",
     "@swc/core-linux-x64-musl": "^1.4.0",
     "@rollup/rollup-linux-x64-musl": "^4.9.5",
-    "@tailwindcss/oxide-linux-arm64-gnu": "^4.0.1",
-    "@tailwindcss/oxide-linux-arm64-musl": "^4.0.1",
+    "@tailwindcss/oxide-linux-arm64-gnu": "^4.0.8",
+    "@tailwindcss/oxide-linux-arm64-musl": "^4.0.8",
     "lightningcss-linux-x64-gnu": "^1.29.1",
     "lightningcss-linux-x64-musl": "^1.29.1"
   }
