@@ -9,43 +9,49 @@ export function meta(_args: Route.MetaArgs) {
 
 export default function Index() {
   return (
-    <main className='min-h-screen p-8 max-w-2xl mx-auto flex flex-col justify-center'>
-      <div className='flex flex-col items-center mb-8'>
-        <img
-          src='/images/profile.jpg'
-          alt='F-G'
-          className='w-48 h-48 rounded-full object-cover mb-8 border-4 border-gray-200'
-        />
-        <h1 className='text-3xl font-semibold'>Hey, I&apos;m F-G 👋</h1>
+    <main className='min-h-screen p-8 max-w-2xl mx-auto flex flex-col'>
+      <div className='flex-grow flex flex-col justify-center'>
+        <div className='flex flex-col items-center mb-8'>
+          <img
+            src='/images/profile.jpg'
+            alt='F-G'
+            className='w-48 h-48 rounded-full object-cover mb-8 border-4 border-gray-200'
+          />
+          <h1 className='text-3xl font-semibold'>Hey, I&apos;m F-G 👋</h1>
+        </div>
+
+        <p className='text-gray-600 mb-8'>
+          Deep learning fanatic by day, open-source tinkerer by night 🦇
+          Navigating the startup rollercoaster in Paris &amp; SF, after creating{' '}
+          <a
+            href='https://pyronear.org'
+            className='text-green-600 hover:text-green-800 underline'
+          >
+            Pyronear
+          </a>
+          , an early wildfire detection NGO. Passions (also recurring year
+          resolutions) include photography, surfing, and playing music.
+        </p>
+
+        <nav className='flex gap-6'>
+          {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
+            <a
+              key={href}
+              href={href}
+              className='text-gray-600 hover:text-gray-900 transition-colors'
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label={label}
+            >
+              <Icon className='w-6 h-6' />
+            </a>
+          ))}
+        </nav>
       </div>
 
-      <p className='text-gray-600 mb-8'>
-        Deep learning fanatic by day, open-source tinkerer by night 🦇
-        Navigating the startup rollercoaster in Paris &amp; SF, after creating{' '}
-        <a
-          href='https://pyronear.org'
-          className='text-green-600 hover:text-green-800 underline'
-        >
-          Pyronear
-        </a>
-        , an early wildfire detection NGO. Passions (also recurring year
-        resolutions) include photography, surfing, and playing music.
+      <p className='text-gray-400 text-sm text-center'>
+        © {new Date().getFullYear()} F-G Fernandez
       </p>
-
-      <nav className='flex gap-6'>
-        {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
-          <a
-            key={href}
-            href={href}
-            className='text-gray-600 hover:text-gray-900 transition-colors'
-            target='_blank'
-            rel='noopener noreferrer'
-            aria-label={label}
-          >
-            <Icon className='w-6 h-6' />
-          </a>
-        ))}
-      </nav>
     </main>
   );
 }
