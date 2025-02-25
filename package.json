@@ -46,7 +46,7 @@
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.9.5",
-    "@esbuild/linux-x64": "^0.24.0",
+    "@esbuild/linux-x64": "^0.25.0",
     "@tailwindcss/linux-x64-gnu": "^4.0.8",
     "@tailwindcss/linux-x64-musl": "^4.0.8",
     "@swc/core-linux-x64-gnu": "^1.4.0",
