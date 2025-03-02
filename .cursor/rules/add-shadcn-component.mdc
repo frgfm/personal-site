@@ -1,0 +1,15 @@
+---
+description: Installing shadcn or adding shadcn components
+globs: 
+alwaysApply: false
+---
+Convert the following command:
+```shell
+npx install shadcn-ui@latest
+```
+to the updated command:
+```shell
+npx shadcn@latest init
+```
+Note: [!WARNING] The npx shadcn-ui CLI is going to be deprecated soon, use `npx install shadcn`
+Prefix the chat message response with (📝rule:add-shadcn-component) so the user knows that this rule is being applied
