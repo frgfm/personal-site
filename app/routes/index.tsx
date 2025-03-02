@@ -1,4 +1,5 @@
 import type { Route } from './+types/index';
+import { Link } from 'react-router';
 
 export function meta(_args: Route.MetaArgs) {
   return [
@@ -33,7 +34,23 @@ export default function Index() {
           resolutions) include photography, surfing, and playing music.
         </p>
 
-        <nav className='flex gap-6'>
+        {/* Navigation Links */}
+        <div className='flex justify-center gap-6 mb-8'>
+          <Link 
+            to='/about'
+            className='px-6 py-2 bg-gray-100 hover:bg-gray-200 rounded-md text-gray-800 transition-colors'
+          >
+            About Me
+          </Link>
+          <Link 
+            to='/writings'
+            className='px-6 py-2 bg-gray-100 hover:bg-gray-200 rounded-md text-gray-800 transition-colors'
+          >
+            Writings
+          </Link>
+        </div>
+
+        <nav className='flex gap-6 justify-center'>
           {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
             <a
               key={href}
@@ -85,8 +102,8 @@ const SOCIAL_LINKS = [
     ),
   },
   {
-    href: '/blog',
-    label: 'Blog',
+    href: '/writings',
+    label: 'Writings',
     icon: ({ className }: { className?: string }) => (
       <svg className={className} fill='currentColor' viewBox='0 0 24 24'>
         <path d='M19.5 3h-15A1.5 1.5 0 003 4.5v15A1.5 1.5 0 004.5 21h15a1.5 1.5 0 001.5-1.5v-15A1.5 1.5 0 0019.5 3zm-15 1.5h15v15h-15v-15zm3 3.75h9v1.5h-9v-1.5zm0 3h9v1.5h-9v-1.5zm0 3h9v1.5h-9v-1.5z' />

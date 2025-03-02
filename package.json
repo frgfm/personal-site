@@ -13,17 +13,23 @@
     "check": "pnpm run typecheck && pnpm run lint && pnpm run format-check"
   },
   "dependencies": {
+    "@mdx-js/react": "^3.1.0",
+    "@mdx-js/rollup": "^3.1.0",
     "@react-router/node": "^7.1.5",
     "@react-router/serve": "^7.1.5",
+    "@tailwindcss/typography": "^0.5.16",
+    "gray-matter": "^4.0.3",
     "isbot": "^5.1.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.1.5"
+    "react-markdown": "^10.0.0",
+    "react-router": "^7.1.5",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@react-router/dev": "^7.1.5",
-    "@tailwindcss/vite": "^4.0.8",
     "@tailwindcss/postcss": "^4.0.8",
+    "@tailwindcss/vite": "^4.0.8",
     "@types/node": "^20",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
@@ -45,13 +51,13 @@
     "vite-tsconfig-paths": "^5.1.4"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.9.5",
     "@esbuild/linux-x64": "^0.24.0",
-    "@tailwindcss/linux-x64-gnu": "^4.0.8",
-    "@tailwindcss/linux-x64-musl": "^4.0.8",
+    "@rollup/rollup-linux-x64-gnu": "^4.9.5",
+    "@rollup/rollup-linux-x64-musl": "^4.9.5",
     "@swc/core-linux-x64-gnu": "^1.4.0",
     "@swc/core-linux-x64-musl": "^1.4.0",
-    "@rollup/rollup-linux-x64-musl": "^4.9.5",
+    "@tailwindcss/linux-x64-gnu": "^4.0.8",
+    "@tailwindcss/linux-x64-musl": "^4.0.8",
     "@tailwindcss/oxide-linux-arm64-gnu": "^4.0.1",
     "@tailwindcss/oxide-linux-arm64-musl": "^4.0.1",
     "lightningcss-linux-x64-gnu": "^1.29.1",
